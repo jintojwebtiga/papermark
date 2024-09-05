@@ -47,6 +47,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
         host?.endsWith(".vercel.app")
       ))
   ) {
+    console.log('going to DomainMiddleware');
     return DomainMiddleware(req);
   }
 
